@@ -6,9 +6,10 @@ const PORT = process.env.PORT || 3000;
 app.engine('handlebars', expbs());
 app.set('view engine', 'handlebars');
 
+var routes = require("./controllers/burgers_controller");
 
 
-app.listen(8080, () => {
+app.listen(3000, () => {
     console.log('Server is up at PORT ' + PORT);
 });
 

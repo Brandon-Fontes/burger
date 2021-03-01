@@ -1,1 +1,2 @@
-const orm = require('orm');
+const orm = require("../config/orm");
+

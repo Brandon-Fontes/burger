@@ -1,0 +1,39 @@
+<div class="container bg">
+
+    <div class="row">
+        <div class="center col-sm-12">
+            <img src="../public/img/burger_pic.jfif">
+            <h1>Eat-Da-Burger</h1>
+            <p></p>
+        </div>
+    </div>
+    <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li>{{burger_name}}
+            <button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">Eat ME!</button>
+
+        </li>
+        {{/unless}}
+        {{/each}}
+
+
+        {{#each burgers}}
+        {{#if devoured}}
+        <li>
+            <button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">That was good!</button>
+            {{/if}}
+            {{/each}}
+        </li>
+    </ul>
+
+    <h2>Add a Burger</h2>
+    <form class="create-form">
+        <div class="form-group">
+            <label for="nom">Burger Name:</label>
+            <input type="text" id="nom" name="name">
+        </div>
+        <button type="submit">Add Burger</button>
+    </form>
+
+</div>

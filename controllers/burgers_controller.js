@@ -7,3 +7,5 @@ const burger = require("../models/burger");
 router.get('/', function (req, res) {
     res.redirect('/index');
 })
+
+
