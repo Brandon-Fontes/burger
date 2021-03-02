@@ -2,7 +2,7 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "burgers_controller.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
