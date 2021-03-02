@@ -2,10 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-const burger = require("../models/burger");
+const burger = require("../models/burger.js");
 
-router.get('/', function (req, res) {
-    res.redirect('/index');
+router.get("/", function (req, res) {
+    res.render("index", {});
 });
 
 router.get("/index", function (req, res) {

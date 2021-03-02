@@ -63,6 +63,6 @@ var orm = {
             cb(res);
         });
     }
-}
+};
 
 module.exports = orm;
