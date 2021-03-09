@@ -14,7 +14,7 @@ var router = require("./controllers/burgers_controller");
 app.use(router);
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server is up at PORT ' + PORT);
 });
 
