@@ -10,7 +10,7 @@ function objToSql(ob) {
     var arr = [];
 
     for (var key in ob) {
-        var value = ob[key];
+        var val = ob[key];
         if(Object.hasOwnProperty.call(ob, key)) {
             if(typeof val === "string" && val.indexOf(" ") >= 0) {
                 val = "'" + val + "'";
@@ -34,11 +34,12 @@ var orm = {
     insertOne: function (table, cols, vals, cb) {
         var queryAdd = "insert into " + table;
 
-        queryAdd += " (";
-        queryAdd += cols.toString();
-        queryAdd += ") ";
-        queryAdd += "values (";
-        queryAdd += ") ";
+        queryAdd += " (`";
+        queryAdd += cols.join("`, `");
+        queryAdd += "`) ";
+        queryAdd += "values ('";
+        queryAdd += vals.join("', '");
+        queryAdd += "') ";
 
         console.log(queryAdd);
 
