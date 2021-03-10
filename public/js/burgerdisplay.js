@@ -1,12 +1,11 @@
 $(function() {
     $(".devoured").on("click", function (event) {
         var id = $(this).data("id");
+        var newDevoured = false; 
         if($(this).data("devoured") === 0) {
-            var devoured = true 
-        } else devoured = false
+           newDevoured = true 
+        }
 
-        console.log(devoured);
-        console.log(id);
         var newDevoured = {
             devoured: newDevoured
         }
@@ -16,7 +15,6 @@ $(function() {
             data: newDevoured 
         }).then(
             function() {
-                console.log("changed devour status to ", devoured);
                 location.reload();
             }
         )
@@ -39,4 +37,5 @@ $(function() {
             }
         )
     })
+
 })
